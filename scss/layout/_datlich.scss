@@ -1,0 +1,20 @@
+.datlich{
+  &__offcanvas-bar{
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 100vh;
+    height: 80vh;
+    @include media-breakpoint-up('m'){
+      height: 72vh;
+    }
+    transition: top .3s ease-out;
+    padding: 0;
+    .uk-open> &{
+      top: 20vh;
+      @include media-breakpoint-up('m'){
+        top: 28vh;
+      }
+    }
+  }
+}

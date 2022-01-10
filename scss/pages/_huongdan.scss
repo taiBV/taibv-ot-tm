@@ -1,0 +1,28 @@
+.huongdan{
+  &__section{
+    @include media-breakpoint-up('m'){
+      padding-top: 30px;
+      padding-bottom: 64px;
+    }
+  }
+  &__item{
+    &:nth-child(n+2){
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #AEAEAE;
+    }
+  }
+  &__title{
+    margin: 0;
+    color: #000000;
+    @extend .fz-18;
+    line-height: (22/18);
+    font-family: $Lexend-Medium;
+  }
+  &__desc{
+    color: #000000;
+    @extend .fz-16;
+    line-height: (20/16);
+    font-family: $Lexend-Regular;
+  }
+}

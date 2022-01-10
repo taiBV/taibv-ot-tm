@@ -1,0 +1,366 @@
+.chitietgiaovien{
+  &__section{
+    padding-top: 15px;
+    @include media-breakpoint-up('m'){
+      padding-top: 20px;
+      padding-bottom: 74px;
+    }
+    &__boxVideo{
+      border-radius: 10px;
+    }
+    &__card1{
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      &__sidebar{
+        &__table{
+          border: 1px solid #EBEBEB;
+          box-sizing: border-box;
+          tr{
+            th{
+              text-align: center;
+              color: #000000;
+              @extend .fz-14;
+              font-family: $Lexend-Medium;
+              padding-top: 0;
+              padding-bottom: 0;
+              vertical-align: middle;
+              width: 80px;
+              box-sizing: border-box;
+              @include media-breakpoint-up('m'){
+                width: 91px;
+              }
+            }
+            td{
+              background: #EBEBEB;
+              border: 1px solid #FFFFFF;
+              box-sizing: border-box;
+              width: 37px;
+              height: 26px;
+              @include media-breakpoint-up('m'){
+                width: 37px;
+                height: 32px;
+              }
+              padding: 0;
+              &.uk-active{
+                background: #65AF54;
+              }
+              &.uk-open{
+                background: #65AF54;
+                position: relative;
+                &:before{
+                  content: "";
+                  position: absolute;
+                  $x:1px;
+                  top: #{$x};
+                  left: #{$x};
+                  right: #{$x};
+                  bottom: #{$x};
+                  background: #EBEBEB;
+                  $w:8.5px;
+                  $h:6px;
+                  clip-path: polygon(calc(100% - #{$w}) 0, 100% #{$h}, 100% 100%, 0 100%, 0 0);
+                }
+              }
+            }
+          }
+        }
+        &__txt{
+          color: #000000;
+          @extend .fz-16;
+          font-family: $Lexend-Medium;
+        }
+        &__btn{
+          $x:42px;
+          line-height: calc(#{$x} - 2px);
+          text-transform: inherit;
+          box-sizing: border-box;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          span{
+            @extend .fz-16;
+            font-family: $Lexend-Medium;
+          }
+          &--default{
+            //background: #FFFFFF;
+            //border: 1px solid #AEAEAE;
+            &:not(:hover){
+              border-color: #AEAEAE;
+            }
+          }
+          &--primary{
+            background: #65AF54;
+            border: 1px solid #AEAEAE;
+            @include media-breakpoint-up('m'){
+              min-width: 242px;
+            }
+            &:hover{
+              border-color: #65AF54;
+              background: #FFFFFF;
+              color: #65AF54;
+            }
+          }
+        }
+        &__item{
+          position: relative;
+          $x:15px;
+          &:nth-child(n+2){
+            margin-top: #{$x};
+            padding-top: #{$x};
+            &:before{
+              content: "";
+              width: 15px;
+              height: 2px;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              top: 0;
+              background: #65AF54;
+              border-radius: 1px;
+            }
+          }
+        }
+      }
+      &__danhgia{
+        &__txt{
+          color: #000000;
+          @extend .fz-16;
+          font-family: $Lexend-Regular;
+        }
+        &__item{
+          &:nth-child(n+2){
+            margin-top: 15px;
+            @include media-breakpoint-up('m'){
+              margin-top: 20px;
+            }
+          }
+        }
+        &__box1{
+          padding: 10px;
+          @include media-breakpoint-up('m'){
+            padding: 10px 15px;
+          }
+          background: #FAFAFC;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          //min-height: 130px;
+        }
+        &__txt1{
+          color: #263238;
+          @extend .fz-16;
+        }
+        &__name{
+          color: #000000;
+          @extend .fz-14;
+        }
+      }
+      &__khoahoc{
+        &__box1{
+          @extend .chitietgiaovien__section__card1__thongke__box1;
+          &:nth-child(n+2){
+            margin-top: 10px;
+            @include media-breakpoint-up('m'){
+              margin-top: 15px;
+            }
+          }
+        }
+        &__box2{
+          padding: 10px 15px;
+          text-align: center;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          &.uk-card-default{
+            background: rgba(255, 15, 0, 0.2);
+          }
+          &.uk-card-primary{
+            background: rgba(101, 175, 84, 0.2);
+          }
+          &__txt1{
+            color: #263238 !important;
+            @extend .fz-12;
+            font-family: $Lexend-Regular;
+          }
+          &__txt2{
+            color: #000000 !important;
+            @extend .fz-16;
+            font-family: $Lexend-Medium;
+          }
+        }
+      }
+      &__thongke{
+        &__box1{
+          background: #FAFAFC;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          padding: 8px 9px;
+          min-height: 78px;
+        }
+        &__box2{
+          background: #FFFFFF;
+          border: 1px solid #E0E0E0;
+          box-sizing: border-box;
+          border-radius: 500px;
+          &__progress{
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            min-height: 21px;
+            position: relative;
+            &:before{
+              content: "";
+              width: var(--width);
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              background: #65AF54;
+              border-radius: 500px;
+              border-top-left-radius: 0 !important;
+              border-bottom-left-radius: 0 !important;
+            }
+            &:after{
+              content: attr(data-txt);
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 5px;
+              color: #FFFFFF;
+              @extend .fz-12;
+              line-height: (15/12);
+            }
+          }
+          &__txt1{
+            color: #878787;
+            @extend .fz-12;
+            line-height: (15/12);
+            padding: 0 9px;
+          }
+        }
+      }
+      &__desc{
+        color: #263238;
+        @extend .fz-16;
+      }
+      &__label{
+        color: #000000;
+        @extend .fz-18;
+        position: relative;
+        padding-bottom: 7px;
+        font-family: $Lexend-Medium;
+        &:before{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 15px;
+          height: 2px;
+          display: flex;
+          background: #65AF54;
+          border-radius: 1px;
+        }
+      }
+      &__flag{
+        border: 3px solid #FFFFFF;
+        right: 7px;
+        bottom: -5px;
+      }
+      &__link{
+        text-decoration: underline;
+        @extend .chitietgiaovien__section__card1__txt2;
+      }
+      &__txt1{
+        color: #878787;
+        @extend .fz-14;
+        line-height: (17/14);
+        font-family: $Lexend-Regular;
+        &--fz16{
+          @extend .fz-16;
+        }
+      }
+      &__txt2{
+        @extend .fz-16;
+        line-height: (20/16);
+        color: #000000;
+        font-family: $Lexend-Regular;
+      }
+      &__txt3{
+        color: #6EB54D;
+        @extend .fz-21;
+        font-family: $Lexend-SemiBold;
+        line-height: 1.25;
+      }
+      &__txt4{
+        @extend .chitietgiaovien__section__card1__txt2;
+        margin-top: 7px;
+        .chitietgiaovien__section__card1__khoahoc__box1 &{
+          margin-top: 10px;
+        }
+      }
+      &__header{
+        @extend .chitietgiaovien__section__card1__dc;
+      }
+      &__body{
+        @extend .chitietgiaovien__section__card1__dc;
+        border-top: 5px solid #FAFAFC;
+      }
+      &__dc{
+        padding: 15px;
+        @include media-breakpoint-up('m'){
+          padding: 20px;
+        }
+      }
+      &__name{
+        margin: 0;
+        color: #000000;
+        @extend .fz-18;
+        text-transform: uppercase;
+      }
+      &__giaovien{
+        @extend .fz-16;
+        color: #000000;
+        position: relative;
+        padding-bottom: 7px;
+        margin-top: 5px;
+        &:before{
+          content: "";
+          width: 15px;
+          height: 2px;
+          display: flex;
+          background: #65AF54;
+          border-radius: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &__btnrate{
+        text-transform: inherit;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border-color: #37474F;
+        $x:28px;
+        line-height: calc(#{$x} - 2px);
+        padding: 0 6px;
+        span{
+          color: #37474F;
+          @extend .fz-14;
+          font-family: $Lexend-Regular;
+        }
+      }
+      &__iconshare{
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 17px;
+        height: 16px;
+        display: flex;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.23334 1.14286C6.5463 1.14286 6.80001 1.3987 6.80001 1.71429C6.80001 1.99481 6.59955 2.22812 6.3352 2.27651L6.23334 2.28572H2.83334C1.94968 2.28572 1.22349 2.96558 1.14112 3.8349L1.13333 4V13.1429C1.13333 14.0339 1.80754 14.7662 2.66961 14.8493L2.83334 14.8571H11.9C12.7836 14.8571 13.5099 14.1772 13.5922 13.308L13.6 13.1429V12C13.6 11.6845 13.8538 11.4286 14.1667 11.4286C14.4448 11.4286 14.6762 11.6308 14.7242 11.8973L14.7333 12V13.1429C14.7333 14.6577 13.5643 15.8972 12.0863 15.9939L11.9 16H2.83334C1.33112 16 0.101956 14.8211 0.00602672 13.3307L0 13.1429V4C0 2.48516 1.16908 1.24567 2.64704 1.14894L2.83334 1.14286H6.23334ZM10.628 0.660367C10.628 0.148612 11.1514 -0.142766 11.5531 0.0706085L11.6371 0.124161L11.707 0.184744L16.8037 5.23752C17.0152 5.44713 17.0558 5.76969 16.9255 6.02267L16.8687 6.11392L16.8038 6.18871L11.7071 11.2431C11.3498 11.5974 10.7839 11.4087 10.6547 10.9613L10.634 10.8616L10.628 10.7675V8.37269L10.3359 8.3992C10.0538 8.4296 9.77342 8.47394 9.49462 8.53223C7.75634 8.896 6.07975 9.80331 4.45696 11.2645C4.01561 11.6619 3.33276 11.2862 3.40535 10.6858C3.95644 6.12817 6.21865 3.56496 10.0737 3.1401L10.3734 3.11164L10.628 3.09437V0.660367ZM11.7613 1.84119V4.16293L10.4565 4.25143C8.67296 4.39549 7.358 5.02201 6.4183 6.04402C5.66007 6.86866 5.08293 8.01989 4.74498 9.54914C6.34924 8.33677 8.04363 7.577 9.83099 7.31198L10.2249 7.26175L11.7613 7.12255V9.58651L15.667 5.7132L11.7613 1.84119Z' fill='%23212121'/%3E%3C/svg%3E%0A");
+      }
+      &__iconwishlist{
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_4_60583)'%3E%3Cpath d='M11.666 0.609375C10.9153 0.621052 10.181 0.830611 9.53716 1.21689C8.89336 1.60317 8.36289 2.15249 7.99932 2.80938C7.63575 2.15249 7.10528 1.60317 6.46148 1.21689C5.81768 0.830611 5.08335 0.621052 4.33265 0.609375C3.13595 0.661369 2.00846 1.18488 1.19651 2.06553C0.384561 2.94618 -0.0458459 4.11239 -0.000678848 5.30938C-0.000678848 9.82604 7.30332 15.0427 7.61399 15.264L7.99932 15.5367L8.38465 15.264C8.69532 15.044 15.9993 9.82604 15.9993 5.30938C16.0445 4.11239 15.6141 2.94618 14.8021 2.06553C13.9902 1.18488 12.8627 0.661369 11.666 0.609375ZM7.99932 13.8954C5.83065 12.2754 1.33265 8.29538 1.33265 5.30938C1.28708 4.46585 1.5769 3.63853 2.1389 3.00784C2.70089 2.37715 3.48948 1.99428 4.33265 1.94271C5.17583 1.99428 5.96441 2.37715 6.52641 3.00784C7.08841 3.63853 7.37823 4.46585 7.33265 5.30938H8.66599C8.62041 4.46585 8.91023 3.63853 9.47223 3.00784C10.0342 2.37715 10.8228 1.99428 11.666 1.94271C12.5092 1.99428 13.2977 2.37715 13.8597 3.00784C14.4217 3.63853 14.7116 4.46585 14.666 5.30938C14.666 8.29671 10.168 12.2754 7.99932 13.8954Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4_60583'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}
